@@ -1,0 +1,656 @@
+
+/*modal*/
+@media all {
+	.modal-header {
+		border-radius: 3px 3px 0 0;
+		padding: 10px;
+		display: flex;
+		align-items: center;
+		background-color: #2dc1fe;
+	}
+	.modal-body {
+		background-color: #fff;
+		padding: 20px;
+	}
+	.modal-content {
+		-webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, .35);
+		box-shadow: 0 2px 10px rgba(0, 0, 0, .35);
+		position: relative;
+		margin: 30px auto;
+	}
+	.modal-footer {
+		background-color: #fff;
+		border-radius: 0 0 3px 3px;
+		padding: 0 20px 20px;
+	}
+	.modal-w-400 {
+		max-width: 400px;
+	}
+	.modal-w-900 {
+		max-width: 900px;
+	}
+
+	.modal-title, .btn.modal-close-btn {
+		display: inline-flex;
+		vertical-align: middle;
+		color: #fff;
+	}
+	.modal-title {
+		font-size: 18px;
+		font-weight: 600;
+		overflow: hidden;
+		line-height: 40px;
+		text-transform: uppercase;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		padding-left: 10px;
+		width: calc(100% - 40px);
+	}
+	/*close*/
+	.modal-close-btn {
+		cursor: pointer;
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		background: none;
+		border: none;
+		text-transform: uppercase;
+		font-weight: 600;
+		line-height: 1.2;
+		max-width: 100%;
+		text-align: center;
+		-webkit-transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+		transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+		border-radius: 100%;
+		width: 40px;
+		height: 40px;
+		font-size: 16px;
+	}
+	.modal-close-btn:hover, .modal-close-btn:active {
+		background-color: rgba(0, 0, 0, .1);
+		outline: none;
+	}
+	.modal-close-btn:focus {
+		outline: none;
+	}
+}
+
+/*checkbox*/
+@media all {
+	.square-checkbox {
+		user-select: none;
+	}
+	.square-checkbox__input {
+		visibility: hidden;
+		position: absolute;
+		left: -99999px;
+	}
+	.square-checkbox__input:disabled + .square-checkbox__checkmark {
+		cursor: default;
+		background-color: #ececec;
+	}
+	.square-checkbox__checkmark {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 20px;
+		height: 1em;
+		width: 1em;
+		border: 1px solid #cccccc;
+		cursor: pointer;
+		background-color: #fff;
+	}
+	.square-checkbox__checkmark:before {
+		content: '';
+		width: .6em;
+		height: .6em;
+		background-color: transparent;
+		transition: .15s ease;
+	}
+	.square-checkbox__input:checked + .square-checkbox__checkmark:before {
+		background-color: #0099ff;
+	}
+}
+
+
+/*chess-legend*/
+@media all {
+	.chess-legend {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0 -10px;
+	}
+	.chess-legend__it {
+		display: flex;
+		justify-content: center;
+		line-height: 36px;
+		width: 112px;
+		height: 40px;
+		margin: 0 10px;
+		font-weight: bold;
+	}
+	.chess-legend__it._in-sale {
+		color: #fff;
+		background-color: #669933;
+	}
+	.chess-legend__it._selected {
+		border: 3px solid;
+		background-color: #fff;
+		line-height: 32px;
+	}
+	.chess-legend__it._disable {
+		color: #fff;
+		background-color: #cccccc;
+	}
+}
+@media (max-width: 767px) {
+	.chess-legend {
+		margin-top: 0;
+		margin-bottom: 30px;
+	}
+}
+@media (max-width: 479px) {
+	.chess-legend__it {
+		font-size: 13px;
+		width: auto;
+		padding: 0 8px;
+	}
+}
+@media (max-width: 360px) {
+	.chess-legend {
+		margin: 0 -3px;
+	}
+	.chess-legend__it {
+		margin: 0 3px;
+	}
+}
+
+/*icons*/
+@media all {
+	.svg-icons {
+		display: none;
+	}
+	.svg-icons g{
+		fill: currentColor;
+	}
+	.svg-icon{
+		width: 1em;
+		height: 1em;
+	}
+}
+
+/*general styles*/
+@media all {
+	#chess *, #chess *:before, #chess *:after {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	#chess a:focus {
+		outline: none;
+	}
+	#chess a:hover {
+		text-decoration: none;
+	}
+}
+
+/*chess-slider*/
+@media all {
+	.p__swiper.chess-slider {
+		position: relative;
+		opacity: 0;
+		transition: .3s;
+		width: 1400px;
+		max-width: 100%;
+	}
+
+	.p__swiper.chess-slider._ready {
+		opacity: 1;
+	}
+	.chess-slider__inner {
+		display: flex;
+		align-items: flex-end;
+	}
+	.p__swiper.chess-slider .swiper-container {
+		flex: 1;
+	}
+	.p__swiper.chess-slider .swiper-slide {
+		width: auto;
+		flex-grow: 0;
+		flex-shrink: 0;
+		flex-basis: auto;
+		height: auto;
+	}
+	.add-section-slide {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
+		background-color: #f0f0f0;
+		padding: 20px;
+	}
+
+	.floors-list {
+		display: flex;
+		flex-direction: column;
+		padding: 0 20px 14px;
+		width: 120px;
+	}
+	.floors-list._left {
+		align-items: flex-end;
+	}
+	.floors-list._right {
+		align-items: flex-start;
+	}
+	.floors-list__floor {
+		height: 38px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 4px;
+		color: #999999;
+		font-weight: bold;
+	}
+	.floors-list__floor .foors-list__floor-text {
+		margin-left: 4px;
+	}
+
+	.chess-section {
+		background-color: #f0f0f0;
+		padding: 18px;
+	}
+	.chess-section__name {
+		text-transform: uppercase;
+		color: #000;
+		font-size: 18px;
+		text-align: center;
+		margin-bottom: 10px;
+		display: flex;
+		justify-content: center;
+	}
+	.chess-section__name-text {
+
+	}
+	.chess-section__edit-links {
+		margin-left: 10px;
+	}
+	.chess__section-clone-link {
+		text-decoration: none;
+		font-size: 18px;
+		display: inline-block;
+		margin-left: 10px;
+	}
+	.chess__section-clone-link .svg-icon._trash {
+		color: #F44336;
+	}
+	.chess-floor {
+		display: flex;
+		margin: -4px;
+		height: 46px;
+		position: relative;
+	}
+
+	.chess-floor._edit:not(._empty):hover {
+		outline: 1px dashed;
+		z-index: 1;
+	}
+	.chess__floor-edit-area {
+		position: absolute;
+		top: -16px;
+		font-size: 11px;
+		display: none;
+		z-index: 2;
+	}
+	.chess-floor._edit:not(._empty):hover .chess__floor-edit-area {
+		display: flex;
+	}
+
+	.chess__floor-edit-link {
+		display: flex;
+		align-items: center;
+		padding: 2px 5px;
+		background-color: rgba(255, 255, 255, 0.9);
+		width: 120px;
+	}
+	.chess__floor-edit-link._delete {
+		color: #F44336;
+	}
+	.chess__floor-edit-link__icon {
+		margin-right: 5px;
+	}
+	.chess__floor-edit-link__title {
+
+	}
+
+	.chess-flat {
+		width: 62px;
+		height: calc(100% - 8px);
+		display: inline-flex;
+		flex-shrink: 0;
+		align-items: center;
+		justify-content: center;
+		background-color: #669934;
+		border: 3px solid #669934;
+		color: white;
+		margin: 4px;
+		user-select: none;
+		position: relative;
+	}
+	.chess-flat:not(._add-flat-block):hover {
+		outline: 1px dashed #000;
+	}
+	.chess-flat._disable {
+		background-color: #cccccc;
+		border-color: #cccccc;
+	}
+	.chess-flat._selected {
+		border-color: #957519;
+		background-color: #fff;
+		color: #957519;
+	}
+	.chess-flat._add-flat-block {
+		background: none;
+		border-color: #cccccc;
+		border-style: dashed;
+	}
+	.chess-flat._new {
+		opacity: .5;
+	}
+	a.add-flat-link {
+		text-decoration: none;
+		display: flex;
+		width: 100%;
+		height: 100%;
+		align-items: center;
+		justify-content: center;
+		color: #cccccc;
+	}
+
+	.chess-flat._selected>.chess-flat__sort-left, .chess-flat._selected>.chess-flat__sort-right  {
+		position: absolute;
+		top: 0;
+		text-decoration: none;
+		color: #957519;
+		line-height: 1;
+		font-size: 10px;
+		height: 1em;
+		margin: auto;
+		display: none;
+	}
+
+		.chess-flat__sort-left, .chess-flat__sort-right  {
+		position: absolute;
+		top: 0;
+		text-decoration: none;
+		color: white;
+		line-height: 1;
+		font-size: 10px;
+		height: 1em;
+		margin: auto;
+		display: none;
+	}
+	.chess-flat__sort-left:before {
+		content: '\2190';
+	}
+	.chess-flat__sort-right:before {
+		content: '\2192';
+	}
+	.chess-flat__sort-left {
+		left: 0;
+	}
+	.chess-flat__sort-right {
+		right: 0;
+	}
+	.chess-flat:hover .chess-flat__sort-left, .chess-flat:hover .chess-flat__sort-right{
+		display: block;
+	}
+
+	.chess-flat__delete-flat {
+		color: red;
+		position: absolute;
+		right: -1px;
+		bottom: -1px;
+		align-items: center;
+		justify-content: center;
+		font-size: 10px;
+		display: none;
+	}
+	.chess-flat:hover .chess-flat__delete-flat {
+		display: flex;
+	}
+}
+@media (max-width: 1023px) {
+	.floors-list {
+		width: 80px;
+	}
+	.floors-list._right {
+		display: none;
+	}
+}
+@media (max-width: 767px) {
+	.chess-flat {
+		width: 50px;
+	}
+	.floors-list {
+		width: auto;
+		padding-left: 0;
+	}
+	.floors-list._left {
+		align-items: flex-start;
+	}
+	.foors-list__floor-text {
+		display: none;
+	}
+}
+@media (max-width: 479px) {
+	.floors-list {
+		padding-right: 10px;
+	}
+}
+
+/*chess data form*/
+@media all {
+	.chess-data-form {
+		margin-top: 30px;
+	}
+}
+
+/*chess-tippy*/
+@media all {
+	.chess-tippy {
+		width: 280px;
+		padding: 24px 28px 28px;
+	}
+	.chess-tippy__header {
+		font-size: 20px;
+		text-align: left;
+	}
+	.chess-tippy__properties {
+		margin-top: 20px;
+	}
+	.chess-tippy__property {
+		display: flex;
+		justify-content: space-between;
+	}
+	.chess-tippy__property + .chess-tippy__property {
+		margin-top: 12px;
+	}
+	.chess-tippy__property-name {
+		font-size: 14px;
+	}
+	.chess-tippy__property-value {
+		font-size: 17px;
+		font-weight: bold;
+	}
+	.chess-tippy__footer {
+		margin-top: 26px;
+	}
+	.chess-tippy__footer .btn {
+
+	}
+
+
+}
+@media (max-width: 1023px) {
+	.chess-tippy {
+		padding: 15px 18px 24px;
+	}
+	.chess-tippy__properties {
+		margin-top: 10px;
+	}
+	.chess-tippy__property + .chess-tippy__property {
+		margin-top: 6px;
+	}
+}
+@media (max-width: 767px) {
+	.chess-tippy {
+		width: 220px;
+	}
+	.chess-tippy__property-name {
+		font-size: 13px;
+	}
+	.chess-tippy__property-value {
+		font-size: 15px;
+	}
+	.btn.btn-tippy {
+		height: 40px;
+		font-size: 16px;
+	}
+}
+
+/*btn*/
+@media all {
+	.chess-btn {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		vertical-align: middle;
+		background: none;
+		border: none;
+		text-transform: uppercase;
+		font-size: 16px;
+		height: 50px;
+		padding: 0 20px;
+		font-weight: 600;
+		line-height: 1.2;
+		border-radius: 4px;
+		text-align: center;
+		width: 180px;
+		max-width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		text-decoration: none;
+		cursor: pointer;
+		-webkit-transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+		transition: background-color .15s ease, color .15s ease, border-color .15s ease;
+	}
+	.chess-btn:hover, a.chess-btn:hover {
+		text-decoration: none;
+	}
+}
+	.chess-btn._primary {
+		background-color: #2dc1fe;
+		color: #fff;
+	}
+	.chess-btn._secondary {
+		border: 2px solid #cccccc;
+		color: #999999;
+	}
+	.chess-btn._stretch {
+		width: auto;
+	}
+
+/*chess-popup*/
+@media all {
+	.chess__forms {
+		display: none;
+	}
+	.chess__popup {
+		max-width: 900px;
+	}
+	.chess__popup, .chess__popup * {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.chess-edit-form {
+
+	}
+	.chess-edit-form__field {
+		display: flex;
+	}
+	.chess-edit-form__field + .chess-edit-form__field {
+		margin-top: 20px;
+	}
+	.chess-edit-form__field-title {
+		padding-top: 3px;
+		padding-right: 15px;
+		font-weight: bold;
+	}
+	.chess-edit-form__field-values {
+
+	}
+
+	.chess-edit-form__footer {
+		margin-top: 30px;
+		text-align: right;
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+	.chess-edit-form__footer .chess-btn {
+		margin: 0 15px;
+	}
+
+	/*plans*/
+	[data-type="list"] .chess-edit-form__field-values {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -5px;
+	}
+	label.field-plan {
+		margin: 5px;
+		cursor: pointer;
+	}
+	.field-plan__input {
+		display: none;
+	}
+	.field-plan__image-wrapper {
+		display: block;
+		border: 2px solid #ccc;
+		padding: 5px;
+	}
+		.field-plan__input:checked + .field-plan__image-wrapper {
+			border-color: #2dc1fe;
+		}
+	.field-plan__image {
+		width: 150px;
+		height: 150px;
+		display: block;
+		background-size: contain;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.field-plan__name {
+		margin-bottom: 10px;
+		border-bottom: 1px solid transparent;
+		display: inline-block;
+		line-height: 1.1;
+	}
+	.field-plan__input:checked + span + .field-plan__name {
+		border-bottom-color: inherit;
+	}
+
+	/*bool*/
+	.field-checkbox {
+		display: flex;
+		align-items: center;
+	}
+	.field-checkbox__label {
+		margin-left: 10px;
+	}
+}

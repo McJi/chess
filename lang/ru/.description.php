@@ -1,0 +1,4 @@
+<?php
+$MESS['CITRUS_DEVELOPER_CHESS_COMPONENT'] = "Шахматка";
+$MESS['CITRUS_DEVELOPER_CHESS_COMPONENT_DESK'] = "Выводит элемент «Шахматка»";
+$MESS['CITRUS_DEVELOPER_CITRUS'] = "Цитрус";
