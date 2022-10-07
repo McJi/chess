@@ -2,7 +2,7 @@
   "name": "chess",
   "description": "A Vue.js project",
   "version": "1.0.0",
-  "author": "fenyagg <fenyagg@gmail.com>",
+  "author": "mcji <artesianec@mail.ru>",
   "license": "MIT",
   "private": true,
   "scripts": {
